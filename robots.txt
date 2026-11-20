@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Add a "Sitemap: https://your-domain.example/sitemap.xml" line once the
+# production domain is known and sitemap.xml has been generated.
