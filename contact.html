@@ -1051,6 +1051,23 @@
       color: var(--on-surface-soft);
     }
 
+    .contact-info dd a {
+      color: var(--on-surface);
+      border-bottom: 1px solid var(--hairline);
+      transition: color .25s ease, border-color .25s ease;
+    }
+
+    .contact-info dd a:hover {
+      color: var(--gold);
+      border-bottom-color: var(--gold);
+    }
+
+    .contact-info dd a[target="_blank"]::after {
+      content: ' ↗';
+      font-size: 12px;
+      color: var(--gold);
+    }
+
     .social-row {
       display: flex;
       gap: 14px;
@@ -1759,22 +1776,23 @@
   <section data-theme="light" id="contact">
     <div class="wrap contact-grid">
       <div class="contact-info">
-        <span class="section-head kicker" style="margin-bottom:16px; display:block;">CONTACT US</span>
+        <span class="section-head kicker" style="margin-bottom:16px; display:block;">CONTACT &amp; LOCATION</span>
         <h1>We'd love to hear from you</h1>
         <dl>
           <dt>Address</dt>
-          <dd>[ Fellowship address ]</dd>
+          <dd>8H Clareview Village NW<br>Edmonton, AB T5A 3P2<br>Canada<br>
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=8H%20Clareview%20Village%20NW%2C%20Edmonton%2C%20AB%20T5A%203P2%2C%20Canada" target="_blank" rel="noopener">Get directions</a></dd>
           <dt>Phone</dt>
-          <dd>[ Phone number ]</dd>
+          <dd><a href="tel:+17802352381">780-235-2381</a></dd>
           <dt>Email</dt>
-          <dd>[ Email address ]</dd>
+          <dd><a href="mailto:tkdfellowship@gmail.com">tkdfellowship@gmail.com</a></dd>
         </dl>
         <div class="social-row">
           <a href="#" aria-label="Facebook">f</a>
           <a href="#" aria-label="Instagram">ig</a>
           <a href="#" aria-label="YouTube">yt</a>
         </div>
-        <p class="draft-note">[ Insert address, phone, email, and confirm social media links before publishing. ]</p>
+        <p class="draft-note">[ Social media links above and the form's delivery endpoint still need confirming before publishing. ]</p>
       </div>
       <!-- draft-note: TODO (developer) — this form posts to a placeholder endpoint. Replace
            the form's action URL below with the real form-handling service or backend once

@@ -727,6 +727,15 @@
       line-height: 1.55;
     }
 
+    /* recurring slots inside a card (multiple day/time entries) */
+    .meet-card .slot + .slot {
+      margin-top: 20px;
+    }
+
+    .meet-card .slot .time strong {
+      color: var(--navy);
+    }
+
     /* ---------- LEADER (magazine spread, dark) ---------- */
     .leader-grid {
       display: grid;
@@ -1869,26 +1878,46 @@
     <div class="wrap">
       <div class="section-head">
         <span class="kicker">WHEN WE GATHER</span>
-        <h2>Meeting &amp; fellowship times</h2>
+        <h2>Meeting times &amp; fellowship structure</h2>
+        <p>Our regular rhythm of prayer, evangelism, and the Word — in person and online.</p>
       </div>
       <div class="meet-grid">
         <div class="meet-card">
-          <div class="day">Monthly Fellowship Meeting</div>
-          <div class="time">[ Day ], [ Time ] · [ Venue / online link ]</div>
-          <div class="desc">Worship, the Word, and prayer together as a fellowship.</div>
+          <div class="day">Monthly Fellowship</div>
+          <div class="slot">
+            <div class="time"><strong>2nd Saturday</strong> · Evangelism · Downtown</div>
+            <div class="desc">Street evangelism and outreach in the downtown corridor.</div>
+          </div>
+          <div class="slot">
+            <div class="time"><strong>Last Saturday</strong> · 10:00am – 3:00pm · Hybrid</div>
+            <div class="desc">Five hours of prayer — in person and online.</div>
+          </div>
         </div>
         <div class="meet-card">
           <div class="day">Online Prayer Call</div>
-          <div class="time">[ Day ], [ Time ] · [ Call link ]</div>
-          <div class="desc">Intercession for the fellowship, its members, and its vision.</div>
+          <div class="slot">
+            <div class="time"><strong>Monday – Friday</strong> · 6:00am – 6:30am</div>
+            <div class="desc">Early-morning prayer to open the day.</div>
+          </div>
+          <div class="slot">
+            <div class="time"><strong>Monday – Friday</strong> · 7:00pm – 7:30pm</div>
+            <div class="desc">Evening prayer and intercession for the fellowship.</div>
+          </div>
         </div>
         <div class="meet-card">
-          <div class="day">[ Third Meeting Name ]</div>
-          <div class="time">[ Day ], [ Time ] · [ Venue / link ]</div>
-          <div class="desc">[ Short description of this gathering. ]</div>
+          <div class="day">Bible Study &amp; Vigil</div>
+          <div class="slot">
+            <div class="time"><strong>Tuesday</strong> · Bible Study · 7:00pm – 8:00pm</div>
+            <div class="desc">Walking through the Scriptures together.</div>
+          </div>
+          <div class="slot">
+            <div class="time"><strong>Fridays</strong> · Vigil · 10:00pm – 1:00am</div>
+            <div class="desc">A night of worship, prayer, and waiting on the Lord.</div>
+          </div>
         </div>
       </div>
-      <p class="draft-note">[ Confirm days/times for the meetings above before publishing. ]</p>
+      <p class="draft-note">[ Confirm before publishing: the downtown evangelism start time, and the prayer-call / hybrid link.
+        "Five hours prayer" is shown as 10:00am – 3:00pm and the evening call as 7:00pm – 7:30pm — correct either if they differ. ]</p>
     </div>
   </section>
 

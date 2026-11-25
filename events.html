@@ -706,8 +706,9 @@
     .meet-card .day {
       font-family: 'Playfair Display';
       font-size: 28px;
+      line-height: 1.15;
       color: var(--gold-2);
-      margin-bottom: 6px;
+      margin-bottom: 14px;
     }
 
     .meet-card .time {
@@ -720,6 +721,18 @@
     .meet-card .desc {
       font-size: 13px;
       color: var(--on-surface-soft);
+    }
+
+    /* recurring slots inside a card (multiple day/time entries) */
+    .meet-card .slot + .slot {
+      margin-top: 20px;
+      padding-top: 18px;
+      border-top: 1px solid var(--hairline);
+    }
+
+    .meet-card .slot .time strong {
+      color: var(--gold-2);
+      font-weight: 600;
     }
 
     /* ---------- LEADER (magazine spread, dark) ---------- */
@@ -1847,6 +1860,54 @@
         </div>
       </div>
       <p class="draft-note">[ List upcoming events with confirmed dates, times, and a short description for each. ]</p>
+    </div>
+  </section>
+
+  <!-- ============ MEETING TIMES & FELLOWSHIP STRUCTURE — dark ============ -->
+  <section data-theme="dark" id="meeting-times">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">MEETING TIMES</span>
+        <h2>Meeting times &amp; fellowship structure</h2>
+        <p>Our regular rhythm of prayer, evangelism, and the Word — in person and online.</p>
+      </div>
+      <div class="meet-grid">
+        <div class="meet-card">
+          <div class="day">Monthly Fellowship</div>
+          <div class="slot">
+            <div class="time"><strong>2nd Saturday</strong> · Evangelism · Downtown</div>
+            <div class="desc">Street evangelism and outreach in the downtown corridor.</div>
+          </div>
+          <div class="slot">
+            <div class="time"><strong>Last Saturday</strong> · 10:00am – 3:00pm · Hybrid</div>
+            <div class="desc">Five hours of prayer — in person and online.</div>
+          </div>
+        </div>
+        <div class="meet-card">
+          <div class="day">Online Prayer Call</div>
+          <div class="slot">
+            <div class="time"><strong>Monday – Friday</strong> · 6:00am – 6:30am</div>
+            <div class="desc">Early-morning prayer to open the day.</div>
+          </div>
+          <div class="slot">
+            <div class="time"><strong>Monday – Friday</strong> · 7:00pm – 7:30pm</div>
+            <div class="desc">Evening prayer and intercession for the fellowship.</div>
+          </div>
+        </div>
+        <div class="meet-card">
+          <div class="day">Bible Study &amp; Vigil</div>
+          <div class="slot">
+            <div class="time"><strong>Tuesday</strong> · Bible Study · 7:00pm – 8:00pm</div>
+            <div class="desc">Walking through the Scriptures together.</div>
+          </div>
+          <div class="slot">
+            <div class="time"><strong>Fridays</strong> · Vigil · 10:00pm – 1:00am</div>
+            <div class="desc">A night of worship, prayer, and waiting on the Lord.</div>
+          </div>
+        </div>
+      </div>
+      <p class="draft-note">[ Confirm before publishing: the downtown evangelism start time, and the prayer-call / hybrid link.
+        "Five hours prayer" is shown as 10:00am – 3:00pm and the evening call as 7:00pm – 7:30pm — correct either if they differ. ]</p>
     </div>
   </section>
 

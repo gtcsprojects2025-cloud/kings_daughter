@@ -1624,6 +1624,47 @@
   .leader-photo { position: relative; }
   .leader-photo-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
 
+  /* ---------- leader photo panel ----------
+     The photo fills its panel edge to edge (100% cover), while the panel
+     itself stays a bounded, sticky card so it does not run the whole
+     length of the long biography column. */
+  .leader-photo {
+    align-self: start;
+    position: sticky;
+    top: 96px;
+    height: clamp(420px, 80vh, 680px);
+    min-height: 0;
+    padding: 26px;
+    border-radius: 0;
+    background: var(--navy);
+    overflow: hidden;
+  }
+
+  /* the base .leader-photo-img rule makes the image cover this panel 100% */
+
+  /* keep the speaker's face in frame when the panel crops to a wide band */
+  .leader-photo .leader-photo-img {
+    object-position: center 40%;
+  }
+
+  /* the empty run of the photo column continues the copy panel's surface */
+  .leader-grid {
+    background: var(--surface-2);
+  }
+
+  @media (max-width: 900px) {
+    .leader-photo {
+      /* stays positioned so the absolutely-placed image resolves against the
+         panel (a static panel would stretch the image to the whole section) */
+      position: relative;
+      top: auto;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4 / 5;
+      max-height: 560px;
+    }
+  }
+
   /* ================================================================
      PERFORMANCE + ACCESSIBILITY LAYER
      ================================================================ */
@@ -1785,21 +1826,143 @@
     <div class="wrap">
       <div class="leader-grid">
         <div class="leader-photo">
-          <!-- draft-note: The placeholder photo previously here showed a man in a suit and did not
-               match the fellowship's leadership. Removed pending a real photo of the leader. -->
-          <span>[ Leader photograph — to be supplied ]</span>
+          <!-- draft-note: Temporary placeholder image (a speaker at a fellowship gathering). The photo
+               covers its panel edge to edge; the panel is a bounded, sticky card so it does not run
+               the full length of the biography. Swap the <picture> sources for a real photo of the
+               leader when one is supplied. -->
+          <picture>
+            <source type="image/webp" srcset="img/opt/message-speaker-close-520.webp 520w, img/opt/message-speaker-close-790.webp 790w, img/opt/message-speaker-close-1050.webp 1050w" sizes="(max-width: 900px) 100vw, 412px">
+            <img class="leader-photo-img" src="img/opt/message-speaker-close-790.jpg" srcset="img/opt/message-speaker-close-520.jpg 520w, img/opt/message-speaker-close-790.jpg 790w, img/opt/message-speaker-close-1050.jpg 1050w" sizes="(max-width: 900px) 100vw, 412px" width="1050" height="1400" alt="Woman speaking at a podium during a fellowship gathering" decoding="async">
+          </picture>
         </div>
         <div class="leader-copy">
           <div class="kicker">OUR LEADER</div>
-          <h1>[ Leader's Name ]</h1>
-          <div class="role">[ Title — Founder &amp; President, The King's Daughters ]</div>
-          <p>[ Biography — ministry background and journey to founding the fellowship. To be supplied and confirmed by
-            leadership. ]</p>
-          <div class="leader-quote">"[ A defining declaration from the leader's own vision for the fellowship. ]"</div>
-          <p>[ Personal story of calling. ]</p>
+          <h3>Chinwendu Achilefu Madu</h3>
+          <div class="role">Founder &amp; President of the King’s Daughter Fellowship International</div>
+          <h3>Biography — ministry background and journey to founding the fellowship.</h3>
+          <p>Chinwendu Achilefu Madu is a woman of faith, a servant of God, and the pioneer of The King's Daughters Fellowship, a ministry committed to encouraging, equipping, and empowering women to discover their identity in Christ, embrace their God-given purpose, and fulfil their divine assignments</p>
+          <p>
+
+            Her journey is one of transformation, redemption, and the amazing grace of God.
+          </p>
+          <p>
+            For many years, Chinwendu struggled with questions of identity, worth, and purpose. Deep within, she knew she was created for something greater, but the search for fulfilment led her down paths she couldn’t have imagined.
+          </p>
+          <p>
+            By the mercies of God, she eventually discovered that identity, lasting fulfilment, and genuine relevance are found in Christ alone.
+          </p>
+          <p>
+            Her encounter with the Lord Jesus Christ in the summer of 2020 became a defining turning point, opening her eyes to the reality of who she was created to be and awakening her to a deeper understanding of her identity, worth, and purpose in God.
+          </p>
+          <p>
+            Today, having experienced the transforming power of God's love and grace, Chinwendu carries a deep passion for seeing other women encounter Christ and discover who they truly are in Him.
+          </p>
+       
+          <div class="leader-quote">" A defining declaration from the leader's own vision for the fellowship."</div>
+          <p>
+            Through The King’s Daughters Fellowship my commitment is to raise and build by the instrumentality of the word of God and prayer, women intercessors and kingdom agents dedicated to the full service of our Lord Christ with a mandate to act as agents of revival in the workplace, marketplace and the territories where God has domiciled us.
+          </p>
+          <h3>Personal story of calling / journey to founding the fellowship</h3>
+          <p>
+            What is now known as The King’s Daughters Fellowship International began as a small in-house gathering of young female students known as NO JESUS NO LIFE in the Summer of 2020. It all began during one of my trips from Canada to Mexico. Like star gazers, we were all gathered in front of the screen at George Bush International Airport, in Houston Texas.
+          </p>
+          <p>
+            China was grinding to a halt as the Novel Coronavirus was making its historical landmark in China.
+          </p>
+          <p>
+            “What would become of this world’s economic power” was the question in the heart of many, as we stare into China from afar. It wasn’t a news that could pass unnoticed. China holds a huge stake in the survival of many nations, whatever affects China will eventually affect the entire world. So, we stood, watching, and weeping over the upheaval in China. In our minds it was just China’s problem. Commiserating with our brothers and sisters in China over the losses was the least we could do from a distance.
+          </p>
+          <p>
+            Little did we know that what looked like a Chinese epidemic was going to turn into a global catastrophe that will alter the configuration of the entire human race for only God knows how long.
+          </p>
+          <p>
+            I was going back to Canada from Mexico in January 2020 where I went to visit my husband and drop off the kids for a short vacation.
+          </p>
+          <p>
+            It was a strange time to send kids on vacation. School had just resumed, and I had to dispatch my own kids to Mexico. It was the first time in then 11 years of marriage that my kids had to stay apart from me.
+          </p>
+          <p>
+            We had just finished from a church service on the day that decision was taken when a wonderful friend of mine and her husband approached me.
+          </p>
+          <p>
+            “Chi eh, (like she fondly calls me) you need a short break from single parenting. Send these kids to Mexico to go spend time with daddy. You are going through a lot with these kids. Let them go visit the dad at least for a month.”
+          </p>
+          <p>
+            Edwan is one among the very few genuine friends God gifted me in Canada. A friend in need, in cash and in kind. Like she knew that finances were going to be my excuse as the new year had just set in, she offered to help with the ticket fare while I paid whenever it was most convenient.
+          </p>
+          <p>
+            I took off to Mexico, 11 years had passed since I was alone. I didn’t know how it felt to be alone without husband and kids. I was looking forward to the 4 weeks of solitary living, no husband, no child, just me, having me time, resting, and reclining with no disturbance. Wow! How I had imagined that life.
+            I thought it was a time to rest from family; little did I know that it a divinely orchestrated move.
+          </p>
+          <p>
+            Before the weeks elapsed, all borders were closed. Chinese epidemic had snowballed into a global pandemic. Four months passed and there was no sign my kids would make it back to Canada anytime soon. Despondency and its attendant depression set in, coupled with a loss of interest in everything that once gave me vitality.
+            The house was like a hunted house. I could hear the voices of my children everywhere. Especially my last baby.
+
+              I struggled to grapple with the emptiness I felt inside, cried many nights to no avail then, dusted myself up and returned to the life I was used to.
+
+              Boredom set in as everyone had become intimate strangers, alienated from one another due to stringent measures to contain the virus. I made my way to THE SOLOMON’S PORCH; a homeless kitchen run by one of the Canadian pastors in the church where I worshipped.
+          </p>
+          <p>
+            An elderly man began speaking, “the reason why we live an overly busy life is because we don’t want to hear from God. We know that the moment we live a quiet life God will begin to speak to us. And the speaking of God is what many people run away from, so we become engaged in so many activities.”
+            For the first time in my life, words struck me. I went home and began to cry. It was just my life. Activities upon activities in a bid to find purpose and meaning to life.
+            “Does God really speak to people?”  “In what language will God speak to humans?”
+          </p>
+          <p>
+            Then, came July of 2020, we had just finished a birthday party for my husband’s niece. Even at the heat of the NO SO GATHERING AND SOCILA DISTANCING EMBARGO, I still managed to smuggle in some university girls for a bash. Little did I know that it was a party to end all parties.
+
+            I had just laid down to rest when I heard a voice “get deeper with these girls.”
+
+            I was startled. I jumped up from my bed. I sat down on the floor. I wasn’t sure of what I heard. It was more like I was hearing voices. The party was still on, but I was down on the floor in room trembling at   that voice that rattled in my head.
+          </p>
+          <p>
+            Throughout the night, sleep was elusive. I spoke to a friend whose husband was a pastor about what I heard that night, and she told me that Satan for sure cannot tell me to win souls.  I shared the pictures and the videos from the party with a crazy friend of mine and the words that proceeded from his mouth was “hope you are leading those girls to Christ.” This is a guy who never mentioned Jesus to my hearing in that manner, but that day Jesus was the song on his lip.
+          </p>
+          <p>
+            I wasn’t even born again when this word came, but I knew a shift had taken place that night. I called the girls and narrated the encounter of the previous night to them and told them about the need for us to start praying, we agreed and the group NO JESUS NO LIFE was birthed; a ministry where young ladies came to find ventilation in the presence of God. 2 weeks later, I surrendered to Jesus. The transition was so rapid. From party girls to Jesus girls.
+
+          </p>
+          <p>
+            We began our monthly tarry nights.  And tarried into the mornings.  We were full of zeal, full of ambition and full of hopes. Mighty vessels in God’s hand. Always talking about taking over the nations that were represented in our midst. We became insatiable with monthly meetings and switched to biweekly meetings, and it was at this juncture that the enemy struck.
+            My passion began to dwindle as I began to desire what God was not offering me. Like Esau, I traded what I had with God and sacrificed it on the altar of selfishness.
+
+          </p>
+          <p>
+            That detour became my undoing and the undoing of the group. The sisters wept. Many times, they asked why we were no longer meeting. I had no answers because my heart had left, and I had become entangled in other thing outside the boundaries of God’s assignment for me.
+          </p>
+          <p>
+            2021 ushered in a season of spiritual drought. Drought in every area of my life. Unexplainable estrangement and alienation from God. I sought all those exciting moments I used to have with God in my room and in my bathroom. Like Esau I sought them with tears and every encounter ceased like a fountain that suddenly dried up.  Prayer became a torture and every attempt to ascend and connect with God felt like a kick against the barbed wire. As I went through tough moments in my life, I asked the Lord what His purpose for my life was and the same voice I heard the previous year that said “get deeper with these girls” responded.  “What have you done with NO JESUS NO LIFE?”  My face was buried in shame and defeat and instead of asking for mercy, I started recruiting another set of young to re-initiate NO JESUS NO LIFE, but God wasn’t in that arrangement, not because Jesus wasn’t interested in their souls, but because I was living in rebellion.
+          </p>
+          <p>
+            By the spring of 2022, His word came again. This time it did not come to me directly but through his servant, a dear pastor friend of mine. I had forgotten all about women and ladies and ministry. I had just enrolled in the Bible College when the prophecy concerning The King’s Daughters came through God’s servant.
+
+          </p>
+          <p>
+            “Sister chinwendu, I see you doing something with women in your city. I see you raising prophetic intercessors, “he went on and on. I never took anything he said to heart because at the time of this prophecy I was just learning and getting accustomed to daily drill of a minimum one-hour prayer in tongues which was a mandatory requirement for the bible school program. Rasing prophetic intercessors was like dressing me up in a borrowed robe, so I jettisoned it without even giving it a second thought
+          </p>
+          <p>
+            2023, when I was hired by The Edmonton Catholic School Division as a behaviour Therapist working with autistic children the burden to raise a prayer altar for those children came. The pressure to became so palpable that I started recruiting like-minded female co-workers to begin prayer for the autistic children.
+
+            This initiative was fraught with so many uncertainties, so I asked the lord to shatter it if it wasn’t from Him like I was advised by my spiritual father.  The more I prayed that prayer, the more burden for the autistic children intensified. I shared this burden with a few female colleagues at work and the first sister I spoke to told me to be intentional about it. That word intentionality did not resonate well, so I began to brood over it. I went back to my spiritual father again and he said, “you are led, stop fighting”.  I wasn’t sure if I believed him but because I have come to take his counsel as God’s, I took it to heart this time.
+          </p>
+          <p>
+            So, I began to align with the will of God, not because I knew the direction I was heading but because I resolved to rely on His guidance. I trusted Him to fill in the details while I took the step of obedience.
+          </p>
           <div class="leader-facts">
-            <div><strong>Ministry Background</strong><span>[ Summary of ministry history ]</span></div>
+            <div><strong>Ministry Background</strong><span> Summary of ministry history </span></div>
+            <p>
+              At the heart of The King’s Daughters Fellowship is a deep desire to see women, both single and married, discover their God-given purpose and fulfil their divine destinies.
+
+              From NO JESUS, NO LIFE to The King’s Daughters, this central conviction has remained unchanged. The expression may have evolved, but the burden and vision remain the same: which is to raise the complete woman and equip her to become an effective Kingdom agent through the transformative power of prayer and the teaching of God's Word.
+
+            </p>
             <div><strong>Books &amp; Resources</strong><span>[ Titles authored, where applicable ]</span></div>
+            <p>
+              The Long Trek: Navigating Through the Treacherous Terrain Of Sexual Temptation
+
+              My Winterized Home: A Tale of Dream, Loss, Resilience and Finding Home
+
+              Bald: Dribbling Through Pain
+            </p>
           </div>
         </div>
       </div>
@@ -1909,15 +2072,23 @@
       var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
       if ('IntersectionObserver' in window && !reduceMotion) {
-        var io = new IntersectionObserver(function (entries) {
+        var onReveal = function (entries, observer) {
           entries.forEach(function (entry) {
             if (entry.isIntersecting) {
               entry.target.classList.add('is-visible');
-              io.unobserve(entry.target);
+              observer.unobserve(entry.target);
             }
           });
-        }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
-        revealEls.forEach(function (el) { io.observe(el); });
+        };
+        /* Two observers: very tall blocks (e.g. the leader spread on narrow screens, where the
+           biography is one long column) can never reach a 12% ratio inside the viewport, so they
+           would stay invisible. They reveal as soon as they enter instead. */
+        var shortIo = new IntersectionObserver(onReveal, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+        var tallIo = new IntersectionObserver(onReveal, { threshold: 0, rootMargin: '0px 0px -60px 0px' });
+        revealEls.forEach(function (el) {
+          var isTall = el.offsetHeight > (window.innerHeight || 0) * 0.85;
+          (isTall ? tallIo : shortIo).observe(el);
+        });
       } else {
         revealEls.forEach(function (el) { el.classList.add('is-visible'); });
       }
